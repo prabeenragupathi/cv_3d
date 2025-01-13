@@ -8,6 +8,12 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
+      <primitive
+        object={computer.scene}
+        scale={isMobile ? 0.67 : 0.75}
+        position={isMobile ? [0, -3, -2] : [0, -3.25, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
+      />
       <hemisphereLight intensity={10.15} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
@@ -16,12 +22,6 @@ const Computers = ({ isMobile }) => {
         penumbra={1}
         intensity={1}
         castShadow
-      />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.67 : 0.75}
-        position={isMobile ? [0, -3, -2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
   );
@@ -40,9 +40,9 @@ const ComputersCanvas = () => {
 
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    return ()=>{
+    return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    }
+    };
   }, []);
 
   return (
