@@ -12,6 +12,8 @@ import {
   StarsCanvas,
 } from "./components";
 
+import { Toaster } from "react-hot-toast";
+
 function App() {
   return (
     <>
@@ -28,10 +30,11 @@ function App() {
           <Feedbacks />
           <div className="relative z-0">
             <Contact />
-            <StarsCanvas /> 
+            <StarsCanvas />
           </div>
         </div>
       </BrowserRouter>
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }

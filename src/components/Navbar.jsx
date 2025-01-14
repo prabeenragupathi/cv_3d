@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from  "react-router-hash-link";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants/constants";
