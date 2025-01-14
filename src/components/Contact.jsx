@@ -7,11 +7,21 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import toast from "react-hot-toast";
+import { ErrorBoundary } from "react-error-boundary";
 
 //my temlate & servicec id
 const templateId = "template_w9m6rx8";
 const serviceId = "service_df0em3s";
 const publicKey = "u5I3-8sgTpGWHTVCJ";
+
+const ErrorFallback = () => {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <button onClick={() => window.location.reload()}>Try again</button>
+    </div>
+  );
+};
 
 const Contact = () => {
   const formRef = useRef();
@@ -121,9 +131,11 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] z-10"
       >
-        <EarthCanvas />
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <EarthCanvas />
+        </ErrorBoundary>
       </motion.div>
     </div>
   );

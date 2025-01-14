@@ -23,6 +23,16 @@ import {
   jobit,
   tripguide,
   threejs,
+  yhd,
+  shobha,
+  maxin,
+  python,
+  django,
+  postgresql,
+  mysql,
+  sqlite,
+  nextjs,
+  postman,
 } from "../assets";
 
 export const navLinks = [
@@ -85,16 +95,24 @@ const technologies = [
     icon: redux,
   },
   {
+    name: "Nextjs",
+    icon: nextjs,
+  },
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
     name: "MongoDB",
     icon: mongodb,
+  },
+  {
+    name: "MySql",
+    icon: mysql,
+  },
+  {
+    name: "Django",
+    icon: django,
   },
   {
     name: "Three JS",
@@ -104,67 +122,40 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
 ];
 
 const experiences = [
   {
+    title: "Frontend Developer",
+    company_name: "Sobha Engineers",
+    icon: shobha,
+    iconBg: "#383E56",
+    date: "Nov 2023 - Nov 2023",
+    points: [
+      "Developed and maintained responsive websites using HTML, CSS, and JavaScript.",
+      "Enhanced the website's functionality and design to align with the company's branding and user needs.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Maxin Hydro Dynamic",
+    icon: maxin,
+    iconBg: "#E6DEDD",
+    date: "Dec 2023 - Jan 2024",
+    points: [
+      "Created user-friendly web pages and ensured cross-browser compatibility.",
+      "Improved website performance and optimized code for better loading speeds.",
+    ],
+  },
+  {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    company_name: "Yash Home Decors",
+    icon: yhd,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Feb 2024 - Aug 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed and built a custom web application for managing business logic and inventory.",
+      "Implemented features for order tracking, stock management, and reporting to improve operational efficiency.",
     ],
   },
 ];
@@ -172,93 +163,80 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Prabeen delivered an exceptional website for our company, transforming our vision into a digital reality. His attention to detail, technical expertise, and ability to meet deadlines made the entire process smooth and stress-free. Highly recommended for anyone looking for a dependable web developer!",
+    name: "Shobha Engieers",
+    designation: "CEO",
+    company: "Shobha Engieers",
+    image: shobha,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Working with Prabeen was an absolute pleasure. He not only created a visually stunning website but also implemented innovative solutions to improve our online functionality. His understanding of business needs and creativity truly set him apart from the rest.",
+    name: "Maxin",
+    designation: "Co-Founder",
+    company: "Maxin Hydro Dynamic",
+    image: maxin,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Prabeen's expertise in web development has been a game-changer for our digital presence. From design to implementation, he showcased professionalism and deep technical knowledge, ensuring our website met the highest standards. We couldn't be happier with the results!",
+    name: "Yash",
+    designation: "CEO",
+    company: "Yash Home Decors",
+    image: yhd,
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Record Keeper",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A python file to handle MySql database with good CLI. It can be used to store and retrieve data from a database.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "MySQL",
         color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/prabeenragupathi/RecordKeeper",
   },
   {
-    name: "Job IT",
+    name: "CV Template",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This is my cv project. This project is build with html, css and javascript. In this projects I use some animations look good. This webpage is responsive to all devices.",
     tags: [
       {
-        name: "react",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "CSS",
         color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/prabeenragupathi/cv",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "musix",
+    description: "A spotify clone using react js and spotify api.",
     tags: [
       {
-        name: "nextjs",
+        name: "Reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Spotify API",
         color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/prabeenragupathi/musix",
   },
 ];
 

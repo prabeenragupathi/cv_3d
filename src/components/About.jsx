@@ -41,11 +41,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        As a developer work very well. I am have a good knowledge in programming
-        side and design side as well. I started my first coding journey with web
-        design. Now I am good in app development, software development and much
-        better in web design. But still I am not satisfied because this world
-        gets many changes, sso my thirst on coding will never ends.
+        I’m Prabeen Ragupathi, a passionate and highly skilled Fullstack web
+        developer with a strong foundation in JavaScript (JS) and TypeScript
+        (TS), complemented by hands-on experience in frameworks like React.js,
+        Tailwind CSS, and Bootstrap. I also bring versatile expertise in backend
+        technologies, including Python, SQL, and C++, ensuring well-rounded
+        solutions for web development projects.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

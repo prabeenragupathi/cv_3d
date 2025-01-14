@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-fit"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -46,7 +46,10 @@ const ProjectCard = (props) => {
         <div className="mt-4 flex flex-wrap gap-2">
           {props.tags.map((tag, index) => {
             return (
-              <p key={tag.name} className={`text-[14px] ${tag.color} py-1 px-2 `}>
+              <p
+                key={tag.name}
+                className={`text-[14px] ${tag.color} py-1 px-2 `}
+              >
                 #{tag.name}
               </p>
             );
@@ -70,10 +73,14 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-          numquam iusto autem, dolore, aperiam dicta libero eveniet sed
-          reiciendis, accusamus dolorem deserunt culpa velit. Qui quisquam
-          maiores obcaecati doloribus eligendi.
+          In my project portfolio, I have focused on building functional and
+          efficient web solutions tailored to meet specific business needs. From
+          crafting visually appealing websites to developing a robust web
+          application for inventory and business logic management, my projects
+          demonstrate a strong foundation in web technologies like HTML, CSS,
+          and JavaScript. Each project highlights my problem-solving skills,
+          attention to detail, and commitment to delivering impactful digital
+          solutions.
         </motion.p>
       </div>
 

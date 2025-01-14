@@ -3,19 +3,22 @@ import { Canvas } from "@react-three/fiber";
 import { useGLTF, OrbitControls, Preload } from "@react-three/drei";
 import { Suspense } from "react";
 import CanvasLoader from "../Loader";
-const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+import { lazy } from "react";
 
-  return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
-};
+const Earth = lazy(() => import("./EarthLazy"));
+// const Earth = () => {
+//   const earth = useGLTF("./planet/scene.gltf");
+
+//   return (
+//     <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+//   );
+// };
 
 const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop="demand"
+      frameloop="always"
       gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,
@@ -36,5 +39,4 @@ const EarthCanvas = () => {
     </Canvas>
   );
 };
-
 export default EarthCanvas;

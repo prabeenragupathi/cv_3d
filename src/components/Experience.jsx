@@ -18,13 +18,17 @@ const ExperienceCard = ({ index, experience }) => {
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.data}
       dateClassName="text-white text-[14px] font-bold"
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{
+        background: experience.iconBg,
+        borderRadius: "50%",
+        overflow: "hidden",
+      }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex justify-center items-center w-full h-full rounded-full overflow-hidden">
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[70%] h-[70%] object-contain"
+            className="w-[90%] h-[90%] object-contain overflow-hidden rounded-full"
           />
         </div>
       }
@@ -34,7 +38,13 @@ const ExperienceCard = ({ index, experience }) => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white text-[24px] font-bold flex flex-col justify-center items-center mb-1 ">
+          {experience.title}{" "}
+          <span className="text-[#915eff] font-medium text-[17px]">
+            <span className="text-secondary text-[14px]">@</span>
+            {experience.company_name}
+          </span>
+        </h3>
         <p
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
@@ -68,7 +78,11 @@ const Experience = () => {
       <div className="flex flex-col mt-20">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
-            <ExperienceCard key={experience.title} index={index} experience={experience} />
+            <ExperienceCard
+              key={`${experience.title}-${index}`}
+              index={index}
+              experience={experience}
+            />
           ))}
         </VerticalTimeline>
       </div>
