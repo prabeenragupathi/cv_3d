@@ -6,6 +6,12 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import toast from "react-hot-toast";
+
+//my temlate & servicec id
+const templateId = "template_w9m6rx8";
+const serviceId = "service_df0em3s";
+const publicKey = "u5I3-8sgTpGWHTVCJ";
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,8 +22,43 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: form.name,
+          to_name: "Prabeen Ragupathi",
+          from_email: form.email,
+          to_email: "prabeenragupathi.work@gmail.com",
+          message: form.message,
+        },
+        publicKey
+      )
+      .then((res) => {
+        //text, status
+        res.status === 200 &&
+          toast.success("Thank you. I will get back to you soon.");
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((err) => {
+        toast.error(`${err.text.split(".")[0]} - ${err.status}`);
+      });
+
+    setLoading(false);
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
